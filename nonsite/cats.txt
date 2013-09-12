@@ -1,0 +1,6 @@
+Food/Restaurant:                                        "hun" -> hunger
+Health/Doctor/Medical/Hospital:                         "med" -> health
+Parks/Gyms/Playgrounds/Recreation Centers               "str" -> strength/health
+Nightlife/Social Clubs                                  "soc" -> social
+Adult/Art/Museum/Cinema/Arcade/Bowling/Performing Arts  "art" -> satisfaction
+Apartments/House/Home/Hotel/Motel/Hostel                "slp" -> energy

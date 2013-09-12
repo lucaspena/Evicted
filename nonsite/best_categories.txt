@@ -1,0 +1,28 @@
+Adult (LIKE)
+Airports
+Apartments
+Art (LIKE)
+Arcades/Bowling/Cinemas (*)
+Amusement Parks (*)
+Auto/Car (LIKE)
+Bike (LIKE)
+Health/Doctors (LIKE)
+Dance (LIKE)
+Do-It-Yourself Food
+Food/Restaurants (LIKE)
+Gay Bars (*)
+Health and Medical
+Home (LIKE)
+Hospitals
+Clothing (LIKE)
+Nightlife/Social clubs (*)
+Museums
+Parks (*)
+Performing Arts (*)
+Playgrounds (*)
+Gyms
+Recreation Centers
+Restaurants
+Zoos
+
+(*) - For social bar (also clothing)

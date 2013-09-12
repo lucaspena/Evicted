@@ -1,0 +1,71 @@
+(*** Evicted ***)
+(*** Tayler Mandel, Lucas Pena, Mary Xia ***)
+(*** https://fling.seas.upenn.edu/~tmandel/cgi-bin/project/ ***)
+
+(*** FILES ***)
+index.php 
+ - This is the login page. This redirects to checklogin.php upon form submission.
+
+checklogin.php
+ - This page checks that a user is registered and has the correct password. It then redirects to game.php or back to index.php if the user doens't exist.
+
+signup.php 
+ - This page is a form that takes user information and sends it to createaccount.php. This shows an error if the password is too short, doesn't match, or the username is taken.
+
+createaccount.php
+ - This page inserts into the user table and authentication table using a hashed password. It then redirects to game.php.
+
+header.php
+ - This displays an image at the top of the page that is a link back to index.php.
+
+game.php
+ - The main logic for the game is located here. This gets user information, defines the map, displays the stats, and handles location changes and events using JQuery. This does JQuery calls to update.php and changestats.php.
+
+update.php
+ - This handles moving from one location to another. It changes the user's location in the database and changes stats based on distance travelled as well as the weather outside.
+
+changestats.php
+ - This changes user stats based on the event that the user is doing (work, exercise, etc.). This actively queries the database.
+
+logout.php
+ - This page closes the user's session and redirects to index.php. This is called from pressing the logout button.
+
+death.php
+ - This is basically the logout page in that it closes the session, but it also displays that the user has died and must make a new account. This does not redirect to index.php.
+
+styles.css
+ - Style for the whole site.
+
+category.py
+ - This script takes in a category code and returns a string that the button should display for the table in the bottom left.
+
+weather.py
+ - This script takes in a city and state and returns a valid path for our weather API to retrieve data at.
+
+fullparse.py
+ - This script takes in a block of text and searches for keywords. It keeps track of certain words and returns a json object representing the values used in our changestats.php file to determine values changed for each event.
+
+*.png
+ - All images for the site.
+
+(*** NONSITE FOLDER ***)
+AllCategories.txt
+ - A list of all categories in the yelp dataset.
+
+cats.txt
+ - A mapping of yelp categories to our categories.
+
+best_categories.txt
+ - A list of categories we used in our site
+
+schema.txt
+ - Our database schema (mysql).
+
+README
+ - Description of files. See README.
+
+yelpjson folder
+ - Java project for importing data into mysql database.
+
+Documentation.pdf
+ - Documentation

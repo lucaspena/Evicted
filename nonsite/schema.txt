@@ -1,0 +1,53 @@
+﻿CREATE TABLE Users(
+       username VARCHAR(16),
+       firstName VARCHAR(50) NOT NULL,
+       lastName VARCHAR(50) NOT NULL,
+       steps INTEGER NOT NULL,
+       hunger INTEGER NOT NULL,
+       health INTEGER NOT NULL,
+       comfort INTEGER NOT NULL,
+       satisfaction INTEGER NOT NULL,
+       energy INTEGER NOT NULL,
+       money INTEGER NOT NULL,
+       social INTEGER NOT NULL,
+       busid VARCHAR(30),
+       PRIMARY KEY (username),
+       FOREIGN KEY (busid) REFERENCES Business (businessid) ON DELETE CASCADE,
+       FOREIGN KEY (username) REFERENCES Authentication (username) ON DELETE CASCADE
+);
+
+CREATE TABLE Authentication(
+       username VARCHAR(16),
+       password VARCHAR(32) NOT NULL,
+       PRIMARY KEY (username)
+);
+
+CREATE TABLE Business(
+       businessid VARCHAR(30),
+       businessName VARCHAR(100) NOT NULL,
+       fullAddress VARCHAR(255) NOT NULL,
+       xcoord DOUBLE NOT NULL,
+       ycoord DOUBLE NOT NULL,
+       photourl VARCHAR(255) NOT NULL,
+       city VARCHAR(50) NOT NULL,
+       state VARCHAR(5) NOT NULL,
+       reviewCount INTEGER NOT NULL,
+       url VARCHAR(255) NOT NULL,
+       rating DECIMAL NOT NULL,
+       category VARCHAR(3) NOT NULL,
+       PRIMARY KEY (businessid),
+       INDEX x_y_coords(xcoord, ycoord)
+);
+
+CREATE TABLE Review(
+       businessid VARCHAR(30),
+       reviewid VARCHAR(30),
+       useful INTEGER NOT NULL,
+       funny INTEGER NOT NULL,
+       cool INTEGER NOT NULL,
+       rating INTEGER NOT NULL,
+       text TEXT NOT NULL,
+       PRIMARY KEY (reviewid),
+       FOREIGN KEY (businessid) REFERENCES Business (businessid) ON DELETE CASCADE
+);
+        

@@ -1,0 +1,12 @@
+larger area for latlng queries?
+change buttons in business table (bottom right)
+change text color/layout in business table (bottom right)?
+indices
+README
+Documentation
+Group Picture/Description for Aadi's blog
+
+
+
+
+
